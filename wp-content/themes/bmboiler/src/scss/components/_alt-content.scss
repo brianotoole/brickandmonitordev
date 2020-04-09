@@ -1,0 +1,125 @@
+/*********************************************************
+    Alternating Content
+*********************************************************/
+
+.alt-content {
+  position: relative;
+  .sections {
+    li {
+      margin: 0 auto 7.5rem;
+      list-style: none;
+      > div {
+        @media (min-width: $tablet) {
+          max-width: 100%;
+          min-height: 650px;
+          margin: 0;
+        }
+        @media (max-width: $tablet) {
+          max-width: 768px;
+          margin: 0;
+        }
+        @media (max-width: $mobile) {
+          max-width: 350px;
+          margin: 0 auto;
+        }
+      }
+      .image {
+        min-height: 650px; // for jarallax
+        @media (max-width: $tablet)  {
+          min-height: 350px;
+        }
+      }
+      .content {
+        @media (max-width: $tablet) {
+          padding-top: 1.5rem;
+        }
+        text-align: left;
+        .btn {
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
+
+  .format-content {
+    padding-top: 0;
+    > * {
+      margin-top: 0;
+    }
+    ul,
+    ol {
+      li {
+        padding-bottom: 0.5rem;
+        margin: 0 auto;
+        list-style: inherit;
+      }
+    }
+  }
+  @media (min-width: $tablet) {
+    .sections {
+      li {
+        max-width: none;
+        list-style-type: none;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .content > div {
+          margin: 0 3rem 0 2rem;
+        }
+        &:nth-child(even) {
+          .content {
+            display: flex;
+            align-items: center;
+            order: -1;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            @media (min-width: $desktop) {
+              padding-right: 3rem;
+              padding-left: 2rem;
+            }
+            @media (min-width: $desktop-wide) {
+              padding-right: 9rem;
+              padding-left: 8rem;
+            }
+          }
+        }
+        &:nth-child(odd) {
+          .content {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @media (min-width: $desktop) {
+              padding-right: 2rem;
+              padding-left: 3rem;
+            }
+            @media (min-width: $desktop-wide) {
+              padding-right: 8rem;
+              padding-left: 9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .alt-content__heading {
+    padding-bottom: 1.5rem;
+  }
+}
+.alt-content .content {
+  @media (max-width: $phone) {
+    margin-top: 1rem;
+  }
+}
+
+.alt-content .sections li {
+  > div .image {
+    order: 1;
+    flex: 1 0 48%;
+  }
+  &:nth-child(even) {
+    .content {
+      order: 1;
+    }
+  }
+}

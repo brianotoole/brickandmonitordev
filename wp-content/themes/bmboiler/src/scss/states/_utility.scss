@@ -1,0 +1,118 @@
+/*********************************************************
+  Utility / Helper Classes
+  @NOTE: prefix with ".u-"
+*********************************************************/
+
+/**
+  * Visibility
+  */
+.u-visible-desktop {
+  display: none;
+  @media (min-width: $desktop) {
+    display: block;
+  }
+  &--flex {
+    @media (min-width: $desktop) {
+      display: flex;
+    }
+  }
+}
+.u-visible-tablet {
+  display: none;
+  @media (min-width: $tablet) {
+    display: block;
+  }
+  &--flex {
+    @media (min-width: $desktop) {
+      display: flex;
+    }
+  }
+}
+.u-hidden-desktop {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+.u-hidden-tablet {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+.u-hidden-phone {
+  @media (max-width: $tablet) {
+    display: none !important;
+  }
+}
+
+/**
+  * Alignments
+  */
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+/**
+  * Positions
+  */
+
+.u-flex {
+  display: flex;
+}
+
+/**
+  * Text Colors
+  */
+.u-color-white {
+  color: $color__white;
+}
+
+.u-color-primary {
+  color: $color__primary;
+}
+
+.u-color-secondary {
+  color: $color__secondary;
+}
+
+.u-color-tertiary {
+  color: $color__tertiary;
+}
+
+.u-color-link {
+  color: $color__secondary;
+}
+/**
+  * Background Colors
+  */
+
+.u-bg-primary {
+  background-color: $color__primary;
+}
+
+.u-bg-secondary {
+  background-color: $color__secondary;
+}
+
+.u-bg-tertiary {
+  background-color: $color__tertiary;
+}
+
+.u-bg-white {
+  background-color: $color__white;
+}
+
+/**
+  * Fonts
+  */
+
+.u-font-heading {
+  font-family: $font__heading;
+}
+
+.u-font-body {
+  font-family: $font__body;
+}

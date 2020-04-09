@@ -1,0 +1,42 @@
+// INPUTS
+
+// global inputs
+
+input,
+textarea {
+  background: #fff;
+  color: #111;
+  height: 55px;
+  padding: 0 rem(15);
+  border: 2px solid $color__text;
+  font-size: rem(16);
+  outline: none;
+  appearance: none;
+  &:focus {
+    color: #000;
+    border-color: $color__primary;
+    outline: none;
+  }
+}
+
+textarea {
+  height: 200px;
+}
+
+/*** PLACEHOLDER ***/
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: $color__text !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $color__text !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $color__text !important;
+}
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: $color__text !important;
+}

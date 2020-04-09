@@ -1,0 +1,144 @@
+/*********************************************************
+  Typography
+*********************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font__heading;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+  &.sec-heading {
+    text-align: inherit;
+  }
+}
+
+h1,
+.h1 {
+  font-size: rem(32);
+  @media (min-width: $tablet) {
+    font-size: rem(42);
+  }
+  @media (min-width: $desktop-wide) {
+    font-size: rem(54);
+  }
+}
+
+h2,
+.h2 {
+  font-size: rem(28);
+  @media (min-width: $tablet) {
+    font-size: rem(42);
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 500;
+  font-size: rem(24);
+  @media (min-width: $tablet) {
+    font-size: rem(38);
+  }
+}
+
+h4,
+.h4 {
+  font-size: rem(22);
+  @media (min-width: $tablet) {
+    font-size: rem(32);
+  }
+}
+
+h5,
+.h5 {
+  font-size: rem(20);
+  @media (min-width: $tablet) {
+    font-size: rem(28);
+  }
+}
+
+h6,
+.h6 {
+  font-size: rem(18);
+  @media (min-width: $tablet) {
+    font-size: rem(20);
+  }
+}
+
+p,
+.entry-content,
+.format-content,
+ul li {
+  color: $color__text;
+  margin: rem(20) 0 0 0;
+  line-height: 1.5;
+  font-size: rem(18);
+  @media (min-width: $tablet) {
+    font-size: rem(20);
+  }
+}
+
+ul li {
+  margin: 0;
+}
+
+a {
+  color: $color__secondary;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: rem(18);
+  @media (min-width: $tablet) {
+    font-size: rem(20);
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+strong {
+  color: currentColor;
+  font-weight: bold;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote {
+  color: $color__primary;
+}
+
+pre {
+  padding: rem(20);
+  background: $color__black;
+  color: $color__white;
+}
+
+.entry-content ul,
+.alt-content ul {
+  list-style-type: disc;
+  padding-left: rem(20);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+}
+
+.entry-content a {
+  @extend .link-underline;
+}
+
+.alt-content a {
+  @extend .link-underline;
+  &:before,
+  &:after {
+    height: 1px!important;
+  }
+}

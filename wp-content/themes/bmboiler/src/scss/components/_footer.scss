@@ -1,0 +1,145 @@
+/*********************************************************
+  Footer
+*********************************************************/
+
+.footer {
+  background-color: #f9f8f7;
+  ul,
+  li {
+    list-style: none;
+  }
+  p,
+  a,
+  h6,
+  address {
+    color: $color__text;
+  }
+}
+
+.footer .container {
+  padding-top: rem(90);
+}
+
+// Footer-Sections
+.footer__sections {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $desktop) {
+    flex-wrap: wrap;
+    li {
+      margin-bottom: rem(60);
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__sections li {
+  width: 100%;
+  color: $color__white;
+  @media (min-width: $desktop) {
+    flex: 1;
+  }
+  > h6 {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__menu {
+  @media (min-width: $desktop) {
+    margin-top: rem(40);
+  }
+  li {
+    display: block;
+    margin-bottom: rem(2);
+  }
+}
+
+// Footer-Disclaimer
+.footer__disclaimer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: rem(60);
+  padding-top: rem(30);
+}
+
+.footer__mark {
+  display: block;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  svg {
+    width: 100px;
+  }
+  path {
+    color: $color__black;
+  }
+}
+
+.footer__copy {
+  display: flex;
+  align-items: center;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.footer__copy-inner,
+.footer__socials {
+  li,
+  a {
+    display: inline;
+    font-size: rem(15);
+  }
+}
+
+.footer__copy-inner {
+  a {
+    margin-left: rem(10);
+  }
+}
+
+.footer__socials {
+  margin-top: 7px;
+  @media (min-width: $desktop) {
+    margin-left: rem(92);
+  }
+  a {
+    display: inline-block;
+    margin-left: rem(10);
+  }
+}
+
+// Form
+$input-width: 100px;
+$input-height: 65px;
+.footer__form {
+  display: flex;
+  justify-content: space-between;
+  input {
+    width: calc(100% - #{$input-width});
+    height: $input-height;
+    @media (max-width: $tablet) {
+      width: calc(100% - #{$input-width / 1.25});
+    }
+  }
+  button {
+    width: $input-width;
+    height: $input-height;
+    border-bottom: 2px solid $color__text;
+    border-left: 0;
+    border-right: 2px solid $color__text;
+    border-top: 2px solid $color__text;
+    height: 65px;
+    font-size: 12px;
+    font-size: 1rem;
+    position: relative;
+    top: -0.5px;
+    width: 130px;
+    @media (max-width: $tablet) {
+      width: calc(#{$input-width} / 1.25);
+    }
+  }
+}

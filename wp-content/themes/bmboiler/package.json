@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "main": "src/entry.js",
+  "scripts": {
+    "watch": "parcel serve src/entry.js --no-cache --out-dir dist --out-file bundle",
+    "build": "parcel build src/entry.js --no-source-maps --no-cache --out-dir dist --out-file bundle --no-hmr"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.2",
+    "headroom.js": "^0.11.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.13.1",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not ie <= 8"
+  ]
+}

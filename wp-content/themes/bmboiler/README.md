@@ -1,0 +1,1 @@
+# Brick & Monitor WordPress Theme Boilerplate

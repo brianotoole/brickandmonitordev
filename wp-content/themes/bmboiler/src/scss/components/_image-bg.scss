@@ -1,0 +1,39 @@
+
+.image-bg__title {
+	margin: 0;
+	display: none;
+}
+.image-bg__date {
+	font-weight: bold;
+}
+.image-bg .btn {
+	margin-top: 1.25rem;
+}
+
+.image-bg {
+	display: flex;
+	a {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		color: white;
+		background-color: gainsboro;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding: 2rem;
+		box-shadow: inset 0 0 0 99999px rgba(10,10,10,0.1);
+		transition: box-shadow 0.25s linear;
+
+		&:hover, &:focus {
+			text-decoration: none;
+			box-shadow: inset 0 0 0 99999px rgba(10,10,10,0.75);
+			.image-bg__title {
+				display: block;
+			}
+		}
+	}
+}

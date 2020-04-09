@@ -1,0 +1,33 @@
+
+.card__thumb {
+	padding-bottom: 56.25%;
+	background-color: gainsboro;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.card__meta {
+	display: flex;
+}
+.card__categories {
+	flex: 1 1 100%;
+	margin: 1rem 1rem 0 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.card__date {
+	flex: 0 0 auto;
+	margin: 1rem 0 0 0;
+}
+.card .btn {
+	margin: 2rem 0 0 0;
+}
+.card a {
+
+	&:hover, &:focus {
+		text-decoration: none;
+		.card__title {
+			text-decoration: underline;
+		}
+	}
+}

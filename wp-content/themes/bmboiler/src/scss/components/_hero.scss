@@ -1,0 +1,117 @@
+/*********************************************************
+    Hero
+*********************************************************/
+$header-height: 0px;
+.hero {
+  position: relative;
+  height: 725px;
+  background-color: $color__primary;
+  color: $color__white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: $tablet) {
+    height: 575px;
+  }
+  &--home {
+  }
+
+  .single & {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+    }
+  }
+
+  &--interior {
+    height: 520px;
+  }
+
+  &--full-height {
+    height: calc(100vh - #{$header-height});
+  }
+
+  &--has-overlay {
+    position: relative;
+    &:before {
+      background: linear-gradient(180deg, rgba(black, 0) 50%, black 100%);
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0.75;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    &:after {
+      background: rgba(black, 0.6);
+      content: "";
+      height: 100%;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  &--contact {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.hero__content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  color: $color__white;
+  z-index: 10;
+  @media (min-width: $tablet) {
+    margin: 0;
+    max-width: 60%;
+  }
+  p {
+    color: #fff;
+    @media (min-width: $tablet) {
+      font-size: rem(22);
+    }
+  }
+}
+
+.hero__title {
+  margin: 0;
+}
+
+.hero__subtitle {
+  margin-bottom: 1rem;
+}
+.hero--left {
+  background-position: left !important;
+}
+.hero--right {
+  background-position: right !important;
+}
+
+/* HERO INTERIOR */
+.hero-interior {
+  height: auto;
+}
+
+.hero-interior .hero__content {
+  margin-top: 120px;
+}
+
+.hero-interior .hero__title {
+  text-align: center;
+  color: $color__text;
+}

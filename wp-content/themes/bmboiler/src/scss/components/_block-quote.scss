@@ -1,0 +1,13 @@
+.block-quote {
+    max-width: 82%;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @media(min-width: $tablet) {
+        border-left: 2px solid $color__primary;
+        padding-left: 40px;
+    }
+}
+.block-quote__by {
+    margin-top: 4rem;
+}

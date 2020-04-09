@@ -1,0 +1,132 @@
+/*********************************************************
+  Section
+*********************************************************/
+
+.section, section {
+  @include section-padding;
+
+  &--no-pad-top {
+    padding-top: 0!important;
+  }
+
+  &--no-pad-top-md {
+    @media (min-width: $tablet) {
+      padding-top: 0!important;
+    }
+  }
+
+  &--no-pad-btm {
+    padding-bottom: 0!important;
+  }
+
+  &--no-pad {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+  }
+  &--pad-btm-lg {
+    padding-bottom: 3.5rem;
+    @media (min-width: $tablet) {
+      padding-bottom: 7rem;
+    }
+  }
+
+  header,
+  .section-title {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+  &.white {
+    background-color: $color__white;
+  }
+  &.primary {
+    color: $color__white;
+    background-color: $color__primary;
+  }
+  &.secondary {
+    background-color: $color__secondary;
+  }
+  &.tertiary {
+    color: $color__white;
+    background-color: $color__tertiary;
+  }
+  &.gray {
+    background-color: $gray;
+  }
+  &.gray-light {
+    background-color: $gray-light;
+  }
+
+  // Concatination logic
+  &.white + .white {
+    padding-top: 0;
+  }
+  &.primary + .site-footer {
+    padding-top: 0;
+  }
+  &.primary + .primary {
+    box-shadow: inset 0 2px 0 0 transparentize($color__white, .88);
+  }
+  &.gray-light + .gray-light {
+    box-shadow: inset 0 2px 0 0 $color__border;
+  }
+}
+
+.section {
+  padding: 5em 0;
+}
+
+.section--sm {
+  padding: 1.5em 0;
+}
+
+.section--md {
+  padding: 7em 0;
+}
+
+.section--lg {
+  padding: 9em 0;
+}
+
+
+
+/* SECTION SIDEBAR */
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: auto;
+  @media (min-width: $tablet) {
+    position: absolute;
+    width: 155px;
+    left: 0;
+  }
+  &--right {
+    right: 0;
+    left: auto;
+  }
+}
+
+.sidebar__title {
+  position: relative;
+  @media (max-width: $tablet) {
+    margin-bottom: 2rem;
+  }
+}
+
+.sidebar__title-text {
+  display: block;
+  color: $color__text;
+  font-size: rem(26);
+  cursor: default;
+  @media (min-width: $tablet) {
+    transform: rotate(180deg);
+    transform-origin: center center;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font-size: rem(17);
+  }
+}

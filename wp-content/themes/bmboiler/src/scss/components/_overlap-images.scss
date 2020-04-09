@@ -1,0 +1,30 @@
+
+
+.overlap-images {
+  position: relative;
+  display: flex;
+  max-width: 75%;
+  min-height: 520px;
+  margin-bottom: calc(7.5rem + 150px);
+  padding: 0;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .overlap-images__item {
+    padding: 0;
+    margin-bottom: 3rem;
+    &--abs {
+      position: absolute;
+      right: 0;
+      bottom: -150px;
+      width: 50%;
+      min-height: 320px;
+      @media (max-width: $tablet) {
+        position: relative;
+        bottom: auto;
+        width: 100%;
+      }
+    }
+  }
+}

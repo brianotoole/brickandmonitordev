@@ -1,0 +1,39 @@
+
+
+.contact-title {
+  margin-bottom: 2rem;
+}
+
+
+.contact-locations {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.contact-location__image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  background: $color__primary;
+  @media (min-width: $tablet) {
+    max-width: auto;
+    width: 90%;
+  }
+}
+
+.contact-location__content {
+  margin: 2.5rem 0 5rem;
+  padding-left: 2rem;
+  border-left: 2px solid $color__primary;
+  a {
+    color: $color__text;
+  }
+  @media (min-width: $tablet) {
+    margin: 5rem 0;
+  }
+}
+
+.contact-location__content .map {
+  display: inline-block;
+  @extend .link-underline;
+}
