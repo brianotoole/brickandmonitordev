@@ -21,8 +21,7 @@
 <div class="loader-wrapper" id="loader">
   <div class="team-loader">
     <div id="loader-text" class="loader-text">
-      <span>M</span><span>O</span><span>N</span><span>A</span><span>R</span><span>C</span><span>H</span>
-      <span>U</span><span>R</span><span>B</span><span>A</span><span>N</span>
+      <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
      </div><!-- /.loader-text -->
   </div><!-- /.team-loader -->
 </div><!-- /.loader-wrapper -->
